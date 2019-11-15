@@ -4,8 +4,7 @@
 
 #### By _**Hailey Gaylor**_
 ### Flow Chart
-![](diagram.png)
-
+![FlowChart](src/assets/images/TapHizzelFlowChart.png)
 ## Description
 
 _This application was built and designed as a convientant tracking system for vendors around. The functionality of this will allow staff memebers to add and edit a beverage of choice and allow the user to update the status of the beverage through out the day. This application will track and save the data through out the use of the stock to better help calculate production and cost for better forcasting._
