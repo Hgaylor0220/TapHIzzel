@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     var navbarStyle = {
-        backgroundColor: '#FFF8DC',
+        backgroundColor: '#B22222',
         fontFamily: 'Permanent Marker, cursive',
 
     };
     var linkStyle = {
-        color: 'black'
+        color: 'white'
     };
     return (
         <div className='navbar' style={navbarStyle}>

@@ -1,6 +1,6 @@
 import React from 'react';
-import taphizzlehome from '../assets/images/taphizzlehome.jpg'
-import backgroundImage from '../assets/images/background.jpg'
+import taphizzlehome from '../assets/images/taphizzlehome.jpg';
+import backgroundImage from '../assets/images/background.jpg';
 
 function Home() {
 
@@ -10,7 +10,7 @@ function Home() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        color: '#8B0000',
+        color: '#B22222',
         fontWeight: 'bold'
     };
     var imageStyle = {
@@ -22,7 +22,7 @@ function Home() {
     return (
         <div style={homeStyling}>
             <h1> Tap Hizzel</h1>
-            <h4>Wellcome to the Tap Hizzel of the tap houses. </h4>
+            <h1>Wellcome to the Tap Hizzel of the tap houses. </h1>
             <img src={taphizzlehome} style = {imageStyle} />
         </div>
     );
