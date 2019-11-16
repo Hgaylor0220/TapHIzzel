@@ -5,10 +5,11 @@ import Home from './Home';
 import Order from './Order';
 import ViewStock from './ViewStock';
 
+
 function App() {
     return (
         <div>
-            <Header />
+            <Header/>
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/viewstock' component={ViewStock} />
