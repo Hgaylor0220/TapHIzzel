@@ -14,8 +14,8 @@ function Header() {
         <div className='navbar' style={navbarStyle}>
             <Link to='/' style={linkStyle}>Home</Link>
             <h1>Tap Hizzel</h1>
-            <Link to='/ViewStock' style={linkStyle}>View Current Stock</Link>
-            <Link to='/Order' style={linkStyle}>Create a Order</Link>
+            <Link to='/ViewStock' style={linkStyle}>View Inventory</Link> 
+            <Link to='/Order' style={linkStyle}>Place an Order</Link>
         </div>
     );
 }

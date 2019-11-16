@@ -7,3 +7,4 @@ function ViewStock(){
         </div>
     );
 }
+export default ViewStock;
