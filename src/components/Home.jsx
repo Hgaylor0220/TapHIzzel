@@ -10,7 +10,7 @@ function Home() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        color: 'white',
+        color: '#8B0000',
         fontWeight: 'bold'
     };
     var imageStyle = {
