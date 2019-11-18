@@ -1,6 +1,46 @@
 import React from 'react';
 import backgroundImage from '../assets/images/background.jpg';
 
+var masterViewStock = [
+    {
+        name: 'Dead Guy IPA',
+        brand: 'Rouge Ales',
+        price: '$5 pint',
+        alcoholContent: '6.8%'
+    },
+    {
+        name: 'loggEliot Ness',
+        brand: 'Great Lakes Brewing Co',
+        price: '$4.50 pint',
+        alcoholContent: '6.1%'
+    },
+    {
+        name: 'Coors Light',
+        brand: 'Coors Brewing Company',
+        price: '$3 pint',
+        alcoholContent: '4.2%'
+    },
+    {
+        name: 'Ginger Apple Cider',
+        brand: 'Soultree',
+        price: '$6 pint',
+        alcoholContent: '7.45'
+    }, 
+    {
+        name: 'Foothills Sexual Chocolate',
+        brand: 'Foothills gang',
+        price: "$6 pint",
+        alcoholContent: '9.6%'
+    }, 
+    {
+        name: 'Hoppyright Infringement',
+        brand: 'NOLA Brewery',
+        price: '$7.50 pint',
+        alcoholContent: '7.6%'
+    }
+];
+   
+
 function ViewStock(){
     var stockStyling = {
         textAlign: 'center',
@@ -14,6 +54,7 @@ function ViewStock(){
     return(
         <div style={stockStyling}>
             <h1>Current Inventory </h1>
+            {masterViewStock.map((quacker, index) =>
             <form >
                 <label>Select type of beer</label>
                 <select>
