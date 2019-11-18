@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ViewStock from './ViewStock';
+
 
 function Stock(props){
     return (

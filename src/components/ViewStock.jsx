@@ -1,5 +1,6 @@
 import React from 'react';
 import backgroundImage from '../assets/images/background.jpg';
+import Stock from './Stock';
 
 var masterViewStock = [
     {
@@ -29,7 +30,7 @@ var masterViewStock = [
     {
         name: 'Foothills Sexual Chocolate',
         brand: 'Foothills gang',
-        price: "$6 pint",
+        price: '$6 pint',
         alcoholContent: '9.6%'
     }, 
     {
@@ -51,17 +52,29 @@ function ViewStock(){
         color: '#8B0000',
         fontWeight: 'bold'
     };
+    var selectionStyle ={
+        fontFamily: 'Permanent Marker, cursive',
+        color: '#8B0000',
+        fontWeight:'bold'
+    }
     return(
         <div style={stockStyling}>
             <h1>Current Inventory </h1>
-            {masterViewStock.map((quacker, index) =>
-            <form >
-                <label>Select type of beer</label>
+            {masterViewStock.map((stock, index) =>
+                <Stock
+                    name={stock.name}
+                    brand={stock.brand}
+                    price={stock.price}
+                    alcoholContent={stock.alcoholContent}
+                    key={index} />
+            )}
+            <form className= 'card'>
+                <label style={selectionStyle}>Select type of beer to order</label>
                 <select>
                     <option value="IPA">IPA</option>
                     <option value="logger">Logger</option>
                     <option value="cider">Cider</option>
-                    <option value="ale">Ale</option>
+                    <option value="craft">Craft</option>
                     <option value="stout">Stout</option>
                     <option value="indianPaleAle">IndianPaleAle</option>
                     <option value="porter">Porter</option>
