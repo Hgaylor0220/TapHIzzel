@@ -15,7 +15,7 @@ function Order(){
         
         <div style={orderStyling}>
             <h1> Order Page</h1>
-            <form>
+            <form >
                 <label>New Order </label>
                     <select>
                         <option value="IPA">IPA</option>

@@ -4,6 +4,7 @@ import Header from './Header';
 import Home from './Home';
 import Order from './Order';
 import ViewStock from './ViewStock';
+import Admin from './Admin';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                 <Route exact path='/' component={Home} />
                 <Route path='/viewstock' component={ViewStock} />
                 <Route path='/order' component={Order} />
+                <Route path='/admin' >
             </Switch>
         </div>
     );
