@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Order(props) {
     return (
         <div>
-            <h3>{props.type} - {props.names}</h3>
+            <h3>{props.type} - {props.name}</h3>
             <p><em>{props.brand}</em></p>
             <hr />
         </div>
@@ -12,7 +12,7 @@ function Order(props) {
 }
 
 Order.propTypes = {
-    names: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     brand: PropTypes.string
 };

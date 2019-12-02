@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
-import NewOrderController from './NewOrderController';
 import StockList from './StockList';
 import OrderList from './OrderList';
 import Admin from './Admin';
@@ -12,12 +11,12 @@ import Error404 from './Error404';
 
 
 class App extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    // //         masterOrderList: []
-    // //         // masterStockList: []
-    //     };
+    constructor(props) {
+        super(props);
+        this.state = {
+    //         masterOrderList: []
+    //         // masterStockList: []
+        };
     //     this.handleAddingNewOrderToList = this.handleAddingNewOrderToList.bind(this);
     //     // this.handleAddingNewStockToList = this.handleAddingNewStockToList.bind(this);
     
@@ -25,7 +24,7 @@ class App extends React.Component {
     //     var newMasterOrderList = this.state.masterOrderList
     //     newmasterOrderList.push(newOrder);
     //     this.setState({ masterOrderList: newMasterOrderList });
-    // }
+    }
     
     render(){
         return (
