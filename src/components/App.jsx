@@ -29,7 +29,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} /> 
           <Route path='/orderList' render={()=><OrderList orderList={this.state.masterOrderList} />} />
-                <Route path='/neworder' render={() => <NewOrderControl onNewOrderCreation={this.handleAddingNewOrderToList} />} />
+          <Route path='/neworder' render={() => <NewOrderControl onNewOrderCreation={this.handleAddingNewOrderToList} />} />
           <Route path='/admin' render={(props)=><Admin orderList={this.state.masterOrderList} currentRouterPath={props.location.pathname}/>} />
           <Route component={Error404} />
         </Switch>

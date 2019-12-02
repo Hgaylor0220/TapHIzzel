@@ -16,6 +16,7 @@ function ConfirmationQuestions(props) {
         <div style={mainStyling}>
             <h3>Have you double checked the current stock?</h3>
             <button onClick={props.onTroubleshootingConfirmation}>Yes</button>
+            
         </div>
     );
 }

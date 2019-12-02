@@ -7,6 +7,7 @@ function OrderForm(props) {
   let _name = null;
   let _type = null;
   let _brand = null;
+  let _quantity= null;
     
   function handleOrderFormSubmission(event) {
     event.preventDefault();
@@ -14,6 +15,7 @@ function OrderForm(props) {
     _name.value = '';
     _type.value = '';
     _brand.value = '';
+    _quantity.value = '';
     }
     var mainStyling = {
         textAlign: 'center',
@@ -35,7 +37,12 @@ function OrderForm(props) {
               placeholder='Name'
               ref={(input) => { _name = input; }} />
 
-             
+             <input
+                type='text'
+                id='quantity'
+                placeholder='Quantity'
+                    ref={(input) => { _quantity = input; }} />
+
             <input
               type='text'
               id='brand'

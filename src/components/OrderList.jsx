@@ -22,6 +22,7 @@ function OrderList(props) {
                 <Order name={order.name}
                     type={order.type}
                     brand={order.brand}
+                    quantity={order.quantity}
                     currentRouterPath={props.currentRouterPath}
                     key={order.id} />
             )}

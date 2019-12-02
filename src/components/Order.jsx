@@ -6,11 +6,12 @@ function Order(props) {
         <div>
             <h3>{props.type} - {props.name}</h3>
             <h4>{props.brand}</h4>
+            <h4>{props.quantity}</h4>
             <hr />
         </div>;
     if (props.currentRouterPath === '/admin') {
         return (
-            <div onClick={() => { alert('View the order for' + props.name); }}>
+            <div onClick={() => { alert('Order for' + props.name + 'has been submitted for' + props.quantity ); }}>
                 {orderInformation}
             </div>
         );
