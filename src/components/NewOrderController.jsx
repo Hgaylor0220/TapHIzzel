@@ -1,6 +1,8 @@
 import React from 'react';
+import OrderForm from './OrderForm';
+import PropTypes from 'prop-types';
 
-class NewOrderControl extends React.Component {
+class NewOrderController extends React.Component {
 
     constructor(props) {
         super(props);
@@ -10,12 +12,17 @@ class NewOrderControl extends React.Component {
     }
 
     render() {
+        
         return (
             <div>
-                <p>Submit and order here!</p>
+               <p>your order </p>
             </div>
         );
     }
-}   
+}
 
-export default NewOrderControl;
+NewOrderController.propTypes = {
+    onNewOrderCreation: PropTypes.func
+};
+
+export default NewOrderController;

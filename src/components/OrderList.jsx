@@ -1,5 +1,6 @@
 import React from 'react';
 import Order from './Order';
+import PropTypes from 'prop-types';
 import backgroundImage from '../assets/images/background.jpg';
 
 
@@ -43,7 +44,7 @@ var masterOrderList = [
 ];
 
 
-function OrderList() {
+function OrderList(props) {
     var orderStyling = {
         textAlign: 'center',
         fontFamily: 'Permanent Marker, cursive',
@@ -57,13 +58,19 @@ function OrderList() {
 
         <div style={orderStyling}>
             <h1> Order Page</h1>
-             {masterOrderList.map((order, index) =>
+             {props.orderList.map((order) =>
                 <Order name={order.name}
                     type={order.type}
-                    brand={order.brand}
-                    key={index} />
+                     brand={order.brand}
+                    currentRouterPath={props.currentRouterPath}
+                    key={order.id} />
             )}
         </div>
     );
 }
+OrderList.propTypes = {
+    orderList: PropTypes.array,
+    currentRouterPath: PropTypes.string
+};
+
 export default OrderList;
