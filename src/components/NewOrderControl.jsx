@@ -20,7 +20,7 @@ class NewOrderControl extends React.Component {
     render() {
         let currentlyVisibleContent = null;
         if (this.state.formVisibleOnPage) {
-            currentlyVisibleContent = <NewOrderForm onNewOrderCreation={this.props.onNewOrderCreation} />;
+            currentlyVisibleContent = <OrderForm onNewOrderCreation={this.props.onNewOrderCreation} />;
         } else {
             currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation} />;
         }
