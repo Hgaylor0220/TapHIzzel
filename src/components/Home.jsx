@@ -11,6 +11,7 @@ function Home() {
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         color: '#B22222',
+        textShadow: '3px 3px 0 #000',
         fontWeight: 'bold'
     };
     var imageStyle = {

@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     var navbarStyle = {
-        backgroundColor: '#FFF8DC',
+        backgroundColor: '#5C7658',
         fontFamily: 'Permanent Marker, cursive',
+        textShadow: '2px 2px 0 #B22222',
 
     };
     var linkStyle = {
@@ -15,7 +16,7 @@ function Header() {
             <Link to='/' style={linkStyle}>Home</Link>
             <h1>Tap Hizzel</h1>
             <Link to='/ViewStock' style={linkStyle}>View Current Stock</Link>
-            <Link to='/Order' style={linkStyle}>Create a Order</Link>
+            <Link to='/neworder' style={linkStyle}>Create a Order</Link>
         </div>
     );
 }
