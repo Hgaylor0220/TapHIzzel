@@ -7,7 +7,22 @@ import ViewStock from './ViewStock';
 import Admin from './Admin';
 
 
-class App extends React.Component() {
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            formVisibleOnPage: false
+        };
+        this.handleAddingNewOrderToList = this.handleAddingNewOrderToList.bind(this);
+        this.handleAddingNewStockToList = this.handleAddingNewStockToList.bind(this);
+    }
+    NewOrderList(newOrder) {
+        var newMasterOrderList = this.state.masterOrderList
+        newmasterOrderList.push(newOrder);
+        this.setState({ masterOrderList: newMasterOrderList });
+    }
+    
     render(){
 
   
@@ -15,10 +30,11 @@ class App extends React.Component() {
             <div>
                 <Header/>
                 <Switch>
-                    <Route path='/' component={Home}/>
-                    <Route exact path='/Viewstock' render={() => <ViewStock stockList={this.state.masterStockList} />} />
-                    <Route path='/order' component={Order} />
-                    <Route path='/admin' component={Admin} />
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/Viewstock' render={() => <ViewStock stockList={this.state.masterStockList} />} />
+                    <Route path='/Order' render={() => <Order orderList={this.state.masterOrderList} />} />
+                    <Route path='/Admin' component={Admin} />
+                    <Route component={Error404} />
                 </Switch>
             </div>
 
