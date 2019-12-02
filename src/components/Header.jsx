@@ -7,7 +7,7 @@ function Header() {
         color: 'white',
         fontWeight: 'bold'
     };
-    var navTextStyle = {
+    var navBarStyle = {
         color: 'white',
         fontWeight: 'bold',
         fontFamily: 'Permanent Marker, cursive'
@@ -19,32 +19,42 @@ function Header() {
     };
 
     return (
-        <header className="navbar-fixed">
-            <nav>
 
-                <div style={navColor} className="nav-wrapper">
-                    <ul id="nav-mobile" className="left hide-on-med-and-down">
-                        <li>
-                            <form>
-                                <div className="input-field">
-                                    <input id="search" type="search" required />
-                                    <label className="label-icon" value="search"><i className="material-icons">search</i></label>
-                                    <i className="material-icons">close</i>
-                                </div>
-                            </form>
-                        </li>
+        <div className='navbar' style={navBarStyle}>
+            <Link to='/' style={linkStyle}>Home</Link>
+            <h1>Tap Hizzel</h1>
+            <Link to='/ViewStock' style={linkStyle}>View Current Stock</Link>
+            <Link to='/Order' style={linkStyle}>Create a Order</Link>
+            <Link to='/ViewStock' style={linkStyle}>View Inventory</Link>
+            <Link to='/Order' style={linkStyle}>Place an Order</Link>
+        </div>
 
-                    </ul>
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link style={navTextStyle} to='/'>Home</Link></li>
-                        <li><Link style={navTextStyle} to='AddSandwich'>View Stock</Link></li>
-                        <li><Link style={navTextStyle} to='ReviewSandwich'>Admin</Link></li>
-                        <li><Link style={navTextStyle} to='ReviewSandwich'>Place Order</Link></li>
+        // <header className="navbar-fixed">
+        //     <nav>
 
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        //         <div style={navColor} className="nav-wrapper">
+        //             <ul id="nav-mobile" className="left hide-on-med-and-down">
+        //                 <li>
+        //                     <form>
+        //                         <div className="input-field">
+        //                             <input id="search" type="search" required />
+        //                             <label className="label-icon" value="search"><i className="material-icons">search</i></label>
+        //                             <i className="material-icons">close</i>
+        //                         </div>
+        //                     </form>
+        //                 </li>
+
+        //             </ul>
+        //             <ul id="nav-mobile" className="right hide-on-med-and-down">
+        //                 <li><Link style={navTextStyle} to='/'>Home</Link></li>
+        //                 <li><Link style={navTextStyle} to='AddSandwich'>View Stock</Link></li>
+        //                 <li><Link style={navTextStyle} to='ReviewSandwich'>Admin</Link></li>
+        //                 <li><Link style={navTextStyle} to='ReviewSandwich'>Place Order</Link></li>
+
+        //             </ul>
+        //         </div>
+        //     </nav>
+        // </header>
     );
 }
 

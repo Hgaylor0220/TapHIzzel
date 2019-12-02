@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-function Stock(props){
+function StockList(props) {
     return (
         <div
             className="card" >
@@ -15,11 +15,11 @@ function Stock(props){
     );
 }
 
-    Stock.propTypes = {
-        name: PropTypes.string.isRequired,
-        brand: PropTypes.string.isRequired,
-        price: PropTypes.string,
-        alcoholContent: PropTypes.string
-        };
- 
-export default Stock;
+Stock.propTypes = {
+    name: PropTypes.string.isRequired,
+    brand: PropTypes.string.isRequired,
+    price: PropTypes.string,
+    alcoholContent: PropTypes.string
+};
+
+export default StockList;
