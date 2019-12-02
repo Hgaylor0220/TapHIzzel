@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import JackieChan from '../assets/img/JackieChan.jpg';
+import JackieChan from '../assets/images/JackieChan.jpg';
 import PropTypes from 'prop-types';
 
 function Error404(props) {
