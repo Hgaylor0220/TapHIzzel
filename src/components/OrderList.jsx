@@ -1,7 +1,7 @@
 import React from 'react';
 import Order from './Order';
 import PropTypes from 'prop-types';
-import backgroundImage from '../assets/images/background.jpg';
+import backgroundImage from '../assets/images/background.jpg';  
 
 
 function OrderList(props) {
