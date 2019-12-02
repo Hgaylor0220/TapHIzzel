@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   handleAddingNewOrderToList(newOrder){
-    var newMasterOrderList = this.state.masterOrderList.slice();
+    var newMasterOrderList = this.state.masterOrderList;
     newMasterOrderList.push(newOrder);
     this.setState({masterOrderList: newMasterOrderList});
   }
