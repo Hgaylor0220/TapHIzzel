@@ -39,11 +39,12 @@ function OrderForm(props) {
     );
 }
 
-NewOrderForm.propTypes = {
+OrderForm.propTypes = {
     newOrderSubmission: PropTypes.func
 };
 
 export default OrderForm;
+
     // function NewTicketForm() {
     //     return (
     //         <div>

@@ -8,7 +8,7 @@ module.exports = {
         'react-hot-loader/patch',
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
-        resolve(__dirname, "src") + "/index.jsx"
+        resolve(__dirname, "src", "index.jsx")
     ],
 
     output: {
@@ -32,13 +32,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            },
-            {
                 test: /\.jsx?$/,
                 enforce: "pre",
                 loader: "eslint-loader",
@@ -46,16 +39,6 @@ module.exports = {
                 options: {
                     emitWarning: true,
                     configFile: "./.eslintrc.json"
-                }
-            },
-            {
-                test: /\.(png|gif|jp(e*)g|svg)$/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 8000,
-                        name: 'images/[hash]-[name].[ext]'
-                    }
                 }
             },
             {
@@ -68,12 +51,11 @@ module.exports = {
                         "react",
                     ],
                     plugins: [
-                        "react-hot-loader/babel",
-                        "styled-jsx/babel"
+                        "react-hot-loader/babel"
                     ]
                 }
             }
-        ]
+        ],
     },
 
     plugins: [
@@ -82,7 +64,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'template.ejs',
             appMountId: 'react-app-root',
-            title: 'TapHizzel',
+            title: 'React Help Queue',
             filename: resolve(__dirname, "build", "index.html"),
         }),
     ]

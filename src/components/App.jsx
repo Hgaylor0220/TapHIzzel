@@ -12,15 +12,15 @@ import Error404 from './Error404';
 
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-    //         masterOrderList: []
-    //         // masterStockList: []
-        };
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    // //         masterOrderList: []
+    // //         // masterStockList: []
+    //     };
     //     this.handleAddingNewOrderToList = this.handleAddingNewOrderToList.bind(this);
     //     // this.handleAddingNewStockToList = this.handleAddingNewStockToList.bind(this);
-    }
+    
     // NewOrderList(newOrder) {
     //     var newMasterOrderList = this.state.masterOrderList
     //     newmasterOrderList.push(newOrder);
@@ -28,29 +28,25 @@ class App extends React.Component {
     // }
     
     render(){
-
-  
         return (
             <div>
                 <Header/>
-                <Switch>
+                    <Switch>
                     <Route exact path='/' component={Home}/>
-
                     {/* <Route path='/stockList' render={() => <StockList stockList={this.state.masterStockList} />} />
 
                     <Route path='/Order' render={() => <OrderList orderList={this.state.masterOrderList} />} />
 
                     <Route path='/newOrder' render={() => <NewOrderController newOrderSubmission={this.handleAddingNewOrderToList} />} />
 
-                    <Route path='/admin' render={(props) => <Admin orderList={this.state.masterOrderList} currentRouterPath={props.type.pathname} />} /> */}
+                     <Route path='/admin' render={(props) => <Admin orderList={this.state.masterOrderList} currentRouterPath={props.type.pathname} />} /> */}
                 
-{/*                     
-                    <Route component={Error404} /> */}
+                     {/* <Route component={Error404} /> */}
                 </Switch>
              </div>
 
-                );
-    }
+             );
+         }
 }
 
 export default App;
