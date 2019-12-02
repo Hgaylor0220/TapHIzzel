@@ -2,7 +2,10 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
-import Order from './Order';
+import NewOrderController from './NewOrderController';
+import NewStockController from './NewStockController';
+import StockList from './StockList';
+import OrderList from './OrderList';
 import ViewStock from './ViewStock';
 import Admin from './Admin';
 import Error404 from './Error404';
@@ -14,10 +17,11 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            formVisibleOnPage: false
+            masterOrderList: []
+            // masterStockList: []
         };
         this.handleAddingNewOrderToList = this.handleAddingNewOrderToList.bind(this);
-        this.handleAddingNewStockToList = this.handleAddingNewStockToList.bind(this);
+        // this.handleAddingNewStockToList = this.handleAddingNewStockToList.bind(this);
     }
     NewOrderList(newOrder) {
         var newMasterOrderList = this.state.masterOrderList
@@ -33,9 +37,14 @@ class App extends React.Component {
                 <Header/>
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    <Route path='/Viewstock' render={() => <ViewStock stockList={this.state.masterStockList} />} />
-                    <Route path='/Order' render={() => <Order orderList={this.state.masterOrderList} />} />
-                    <Route path='/Admin' component={Admin} />
+                    {/* <Route path='/Viewstock' render={() => <StockList stockList={this.state.masterStockList} />} /> */}
+                    <Route path='/Order' render={() => <OrderList orderList={this.state.masterOrderList} />} />
+
+                    <Route path='/newOrder' render={() => <NewOrderController newOrderSubmission={this.handleAddingNewOrderToList} />} />
+
+                    <Route path='/admin' render={(props) => <Admin orderList={this.state.masterOrderList} currentRouterPath={props.type.pathname} />} />
+                
+                    
                     <Route component={Error404} />
                 </Switch>
             </div>

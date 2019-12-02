@@ -57,21 +57,6 @@ function OrderList() {
 
         <div style={orderStyling}>
             <h1> Order Page</h1>
-            <form >
-                <label>New Order </label>
-                <select>
-                    <option value="IPA">IPA</option>
-                    <option value="logger">Logger</option>
-                    <option value="cider">Cider</option>
-                    <option value="ale">Ale</option>
-                    <option value="stout">Stout</option>
-                    <option value="indianPaleAle">IndianPaleAle</option>
-                    <option value="porter">Porter</option>
-                    <option value="craft">Craft</option>
-                </select>
-                <input type="submit" value="submit" />
-            </form>
-
              {masterOrderList.map((order, index) =>
                 <Order name={order.name}
                     type={order.type}
