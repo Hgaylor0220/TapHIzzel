@@ -4,46 +4,6 @@ import PropTypes from 'prop-types';
 import backgroundImage from '../assets/images/background.jpg';
 
 
-
-var masterOrderList = [
-    {
-        names:'Dead Guy, Season Bee, HardCore',
-        type: 'IPA',
-        brand: 'Rogue, Naturals Beer, Samstown'
-    },
-
-    {
-        names: 'Pinapple, Ginger Apple Cider, Aces',
-        type: 'Cider',
-        brand: 'ACES Cider,Soultree'
-    },
-
-    {
-        nname: 'Foothills Sexual Chocolate',
-        type: 'Stout',
-        brand: 'Foothills gang'
-    },
-
-    {
-        names: 'loggEliot Ness , Yossmitus',
-        type: 'IndianPaleAle',
-        brand: 'Great Lakes Brewing Co, JonesPaulin Drank'
-    },
-
-    {
-        name: 'Hoppyright Infringement',
-        type: 'Porter',
-        brand: 'NOLA Brewery'
-    },
-
-    {
-        names: 'Coors Light',
-        type: 'Craft',
-        brand: 'Coors Light'
-    }
-];
-
-
 function OrderList(props) {
     var orderStyling = {
         textAlign: 'center',
