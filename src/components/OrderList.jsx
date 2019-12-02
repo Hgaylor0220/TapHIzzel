@@ -21,7 +21,7 @@ function OrderList(props) {
              {props.orderList.map((order) =>
                 <Order name={order.name}
                     type={order.type}
-                     brand={order.brand}
+                    brand={order.brand}
                     currentRouterPath={props.currentRouterPath}
                     key={order.id} />
             )}
