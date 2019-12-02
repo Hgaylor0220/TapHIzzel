@@ -26,11 +26,11 @@ function OrderForm(props) {
               type='text'
               id='brand'
               placeholder='Brand of Beer'
-              ref={(input) => { brand = input; }} />
+              ref={(input) => { _brand = input; }} />
              <textarea
               id='type'
               placeholder='Type of Beed.'
-              ref={(textarea) => { type = textarea; }} />
+              ref={(textarea) => { _type = textarea; }} />
             <button type='submit'>Subit Order!</button>
           </form>
         </div>

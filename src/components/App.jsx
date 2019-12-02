@@ -17,17 +17,17 @@ class App extends React.Component {
   }
 
   handleAddingNewOrderToList(newOrder){
-    var newMasterOrderList = this.state.masterOrderList;
+    var newMasterOrderList = this.state.masterOrderList.slice();
     newMasterOrderList.push(newOrder);
     this.setState({masterOrderList: newMasterOrderList});
   }
-
   render(){
     return (
       <div>
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><OrderList orderList={this.state.masterOrderList} />} />
+          <Route exact path='/' component={Home} /> 
+          <Route path='/OrderList' render={()=><OrderList orderList={this.state.masterOrderList} />} />
           <Route path='/neworder' render={()=><NewOrderControl onNewOrderCreation={this.handleAddingNewOrderToList} />} />
           <Route path='/admin' render={(props)=><Admin orderList={this.state.masterOrderList} currentRouterPath={props.location.pathname}/>} />
           <Route component={Error404} />
@@ -35,7 +35,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 export default App;
