@@ -17,7 +17,7 @@ function Header() {
             <h1>Tap Hizzel</h1>
             <Link to='/admin' style={linkStyle}>View Current Orders</Link>
             <Link to='/neworder' style={linkStyle}>Create a Order</Link>
-            <Link to= '/viewStock' style={linkStyle}>Current Stock </Link>
+            {/* <Link to= '/viewStock' style={linkStyle}>Current Stock </Link> */}
         </div>
     );
 }

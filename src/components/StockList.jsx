@@ -10,11 +10,11 @@ function StockList() {
     );
 }
 
-Stock.propTypes = {
-    name: PropTypes.string.isRequired,
-    brand: PropTypes.string.isRequired,
-    price: PropTypes.string,
-    alcoholContent: PropTypes.string
-};
+// Stock.propTypes = {
+//     name: PropTypes.string.isRequired,
+//     brand: PropTypes.string.isRequired,
+//     price: PropTypes.string,
+//     alcoholContent: PropTypes.string
+// };
 
 export default StockList;

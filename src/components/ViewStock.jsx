@@ -60,15 +60,15 @@ function ViewStock() {
     return (
         <div style={stockStyling}>
             <h1>Current Inventory </h1>
-            {masterViewStock.map((stock, index) =>
+            {/* {masterViewStock.map((stock, index) =>
                 <Stock
                     name={stock.name}
                     brand={stock.brand}
                     price={stock.price}
                     alcoholContent={stock.alcoholContent}
                     key={index} />
-            )}
-            <form className= 'card'>
+            )} */}
+            {/* <form className= 'card'>
                 <label style={selectionStyle}>Select type of beer to order</label>
                 <select>
                     <option value="IPA">IPA</option>
@@ -80,7 +80,7 @@ function ViewStock() {
                     <option value="porter">Porter</option>
                 </select>
                 <input type="submit" value="submit" />
-            </form>
+            </form> */}
         </div>
     );
 }

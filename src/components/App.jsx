@@ -32,8 +32,8 @@ class App extends React.Component {
           <Route path='/orderList' render={()=><OrderList orderList={this.state.masterOrderList} />} />
           <Route path='/neworder' render={() => <NewOrderControl onNewOrderCreation={this.handleAddingNewOrderToList} />} />
           <Route path='/admin' render={(props)=><Admin orderList={this.state.masterOrderList} currentRouterPath={props.location.pathname}/>} />
-
-        <Route path='/viewStock' render={(props) => <ViewStock orderList={this.state.masterOrderList} currentRouterPath={props.location.pathname} />} />
+{/* 
+        <Route path='/viewStock' render={(props) => <ViewStock orderList={this.state.masterOrderList} currentRouterPath={props.location.pathname} />} /> */}
 
           <Route component={Error404} />
         </Switch>
