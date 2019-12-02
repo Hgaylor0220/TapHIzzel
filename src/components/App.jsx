@@ -7,18 +7,22 @@ import ViewStock from './ViewStock';
 import Admin from './Admin';
 
 
-function App() {
-    return (
-        <div>
-            <Header/>
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/viewstock' component={ViewStock} />
-                <Route path='/order' component={Order} />
-                <Route path='/admin' >
-            </Switch>
-        </div>
-    );
+class App extends React.Component() {
+    render(){
+
+  
+        return (
+            <div>
+                <Header/>
+                <Switch>
+                    <Route path='/' component={Home}/>
+                    <Route exact path='/Viewstock' render={() => <ViewStock stockList={this.state.masterStockList} />} />
+                    <Route path='/order' component={Order} />
+                    <Route path='/admin' component={Admin} />
+                </Switch>
+            </div>
+
+                );}
 }
 
 export default App;
