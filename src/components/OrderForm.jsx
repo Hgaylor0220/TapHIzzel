@@ -10,7 +10,7 @@ function OrderForm(props) {
     
   function handleOrderFormSubmission(event) {
     event.preventDefault();
-    props.newOrderSubmission({ name: _name.value, type: _type.value, brand: _brand.value, id: v4()});
+      props.onNewOrderCreation({ name: _name.value, type: _type.value, brand: _brand.value, id: v4() });
     _name.value = '';
     _type.value = '';
     _brand.value = '';
@@ -53,7 +53,7 @@ function OrderForm(props) {
     );
 }
 OrderForm.propTypes = {
-  newOrderSubmission: PropTypes.func
+  onNewTicketCreation: PropTypes.func
 };
 
 export default OrderForm;
