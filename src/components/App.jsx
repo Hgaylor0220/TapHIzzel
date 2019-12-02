@@ -16,28 +16,8 @@ class App extends React.Component {
     this.handleAddingNewOrderToList = this.handleAddingNewOrderToList.bind(this);
   }
 
-  componentDidMount() {
-    this.waitTimeUpdateTimer = setInterval(() =>
-      this.updateOrderElapsedWaitTime(),
-    5000
-    );
-  }
-
-  componentWillUnmount(){
-    clearInterval(this.waitTimeUpdateTimer);
-  }
-
-  updateOrderElapsedWaitTime() {
-    let newMasterOrderList = this.state.masterOrderList.slice();
-    newMasterOrderList.forEach((ticket) =>
-      ticket.formattedWaitTime = (ticket.timeOpen).fromNow(true)
-    );
-    this.setState({masterOrderList: newMasterOrderList});
-  }
-
   handleAddingNewOrderToList(newOrder){
     var newMasterOrderList = this.state.masterOrderList.slice();
-    newOrder.formattedWaitTime = (newOrder.timeOpen).fromNow(true);
     newMasterOrderList.push(newOrder);
     this.setState({masterOrderList: newMasterOrderList});
   }
@@ -47,9 +27,9 @@ class App extends React.Component {
       <div>
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><OrderList ticketList={this.state.masterOrderList} />} />
-          <Route path='/newticket' render={()=><NewOrderControl onNewOrderCreation={this.handleAddingNewOrderToList} />} />
-          <Route path='/admin' render={(props)=><Admin ticketList={this.state.masterOrderList} currentRouterPath={props.location.pathname}/>} />
+          <Route exact path='/' render={()=><OrderList orderList={this.state.masterOrderList} />} />
+          <Route path='/neworder' render={()=><NewOrderControl onNewOrderCreation={this.handleAddingNewOrderToList} />} />
+          <Route path='/admin' render={(props)=><Admin orderList={this.state.masterOrderList} currentRouterPath={props.location.pathname}/>} />
           <Route component={Error404} />
         </Switch>
       </div>
